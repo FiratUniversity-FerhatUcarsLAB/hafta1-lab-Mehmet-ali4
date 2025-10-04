@@ -1,4 +1,27 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541069
+AD-SOYAD:Mehmet Ali KIRAÇÇAKALI
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
+Başla
+
+1. Bilgisayar tarafından rastgele bir sayı seç: (örneğin, 1 ile 100 arasında)
+   - Seçilen sayıyı gizle
+
+2. Kullanıcıdan tahmin al
+   - "Tahmininizi girin: "
+
+3. Tahminin doğru mu, yüksek mi, düşük mü olduğunu kontrol et:
+   - Eğer tahmin doğruysa:
+     - "Tebrikler, doğru tahmin ettiniz!" mesajını göster
+     - Oyunu bitir
+   - Eğer tahmin düşükse:
+     - "Tahmininiz düşük, sayıyı artırın." mesajını göster
+     - Yeni tahmin için kullanıcıdan tekrar giriş al
+   - Eğer tahmin yüksekse:
+     - "Tahmininiz yüksek, sayıyı azaltın." mesajını göster
+     - Yeni tahmin için kullanıcıdan tekrar giriş al
+
+4. Tekrar et adımlarını: 2. ve 3. adımları, kullanıcı doğru sayıyı bulana kadar
+
+Bitti
