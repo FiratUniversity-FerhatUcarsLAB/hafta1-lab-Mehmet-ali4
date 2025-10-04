@@ -1,4 +1,52 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541069
+AD-SOYAD:Mehmet Ali KIRAÇÇAKALI
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
+Başla
+
+1. Malzemeleri Hazırla:
+   - Yumurtaları bir kaba kır
+   - Tuz ve baharatları ekle
+   - Karıştırma işlemi yap
+
+2. Tava Hazırlığı:
+   - Tava ısısı yeterli mi?  // Koşul: Tavayı ısıtıyoruz.
+     - Evet: Tavayı ısıt
+     - Hayır: Tavayı ısıtana kadar bekle
+   - Tereyağını tavaya ekle
+   - Tereyağı eridi mi?  // Koşul: Tereyağının erimesini kontrol et
+     - Evet: Eridi
+     - Hayır: Tereyağını eritmeye devam et
+
+3. Yumurtayı Tavaya Dökme:
+   - Yumurtalı karışımı tavaya dök
+
+4. Pişirme Süreci: 
+   - Pişirme süreci devam ediyor mu?  // Koşul: Karışım tavaya döküldü mü?
+     - Evet: Pişirmeye başla
+     - Hayır: Bekle
+
+   - Omletin alt tarafı pişiyor mu?  // Koşul: Alt taraf pişti mi?
+     - Evet: Omleti çevirebilirsin
+     - Hayır: Alt tarafı pişirmeye devam et
+     
+   - Omletin üst kısmı pişiyor mu?  // Koşul: Üst taraf pişti mi?
+     - Evet: Omletin üstü pişti
+     - Hayır: Üst kısmı pişirmeye devam et
+
+5. Omleti Katlama veya Karıştırma:
+   - Omletin altı ve üstü pişti mi?  // Koşul: İki taraf pişti mi?
+     - Evet: Omleti katla
+     - Hayır: Omleti karıştırmaya devam et
+
+6. İsteğe Bağlı Peynir Ekleme:
+   - Peynirli omlet isteniyor mu?  // Koşul: Peynir eklemek
+     - Evet: Peynir ekle ve erimesini bekle
+     - Hayır: Geç
+
+7. Omleti Servis Et:
+   - Omleti tabağa al
+   - İsteğe bağlı malzemeler ekle (sebzeler, baharatlar vb.)
+
+Bitti
