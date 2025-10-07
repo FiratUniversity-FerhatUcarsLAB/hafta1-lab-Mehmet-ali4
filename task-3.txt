@@ -1,4 +1,58 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541069
+AD-SOYAD:Mehmet Ali KIRAÇÇAKALI
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
+BAŞLA
+
+ÖğrenciListesi ← []
+
+EKRANA_YAZ "Kaç öğrenci gireceksiniz?"
+GİRİŞ ogrenciSayisi
+
+i ← 1
+TEKRARLA (i <= ogrenciSayisi)
+
+    EKRANA_YAZ i + ". öğrencinin adını girin:"
+    GİRİŞ ad
+
+    EKRANA_YAZ ad + " adlı öğrencinin notunu girin (0-100):"
+    GİRİŞ not
+
+    EĞER not < 0 VEYA not > 100 İSE
+        EKRANA_YAZ "Geçersiz not girdiniz. Lütfen 0-100 arası bir değer girin."
+        DEVAM ET (Bu öğrenciyi tekrar sor)
+    SON
+
+    ÖğrenciListesi’ne EKLE {"ad": ad, "not": not}
+
+    i ← i + 1
+
+TEKRAR SONU
+
+// BUBBLE SORT ile notlara göre azalan sıralama
+
+N ← ÖğrenciListesi’nin uzunluğu
+
+TEKRARLA (i ← 0, i < N-1, i ← i+1)
+    TEKRARLA (j ← 0, j < N-i-1, j ← j+1)
+
+        EĞER ÖğrenciListesi[j]["not"] < ÖğrenciListesi[j+1]["not"] İSE
+            // Yer değiştir
+            temp ← ÖğrenciListesi[j]
+            ÖğrenciListesi[j] ← ÖğrenciListesi[j+1]
+            ÖğrenciListesi[j+1] ← temp
+        SON
+
+    TEKRAR SONU
+TEKRAR SONU
+
+// Sıralı listeyi yazdır
+
+EKRANA_YAZ "Öğrenciler en yüksek nottan en düşüğe sıralandı:"
+
+HER öğrenci IN ÖğrenciListesi İÇİN
+    EKRANA_YAZ "Ad: " + öğrenci["ad"] + " | Not: " + öğrenci["not"]
+SON
+
+BİTİR
