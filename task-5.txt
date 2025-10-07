@@ -1,4 +1,64 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541069  
+AD-SOYAD:Mehmet Ali KIRAÇÇAKALI
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
+BAŞLA
+
+fidan_tipi = kullanıcıdan_al()
+ekim_mevsimi = kullanıcıdan_al()
+toprak_nemi = ölç_toprak_nemi()
+toprak_yapisi = kontrol_toprak_yapisi()
+fidan_sagligi = kontrol_fidan_sagligi()
+
+EĞER ekim_mevsimi uygun değilse
+    yazdır("Ekim mevsimi uygun değil. Uygun mevsimi bekleyin.")
+    BİTİR
+
+EĞER toprak_nemi < optimum_nem_seviyesi ise
+    yazdır("Toprak çok kuru, sulama yapılacak.")
+    toprağı_sula()
+    toprak_nemi = ölç_toprak_nemi()
+    EĞER toprak_nemi < optimum_nem_seviyesi ise
+        yazdır("Toprak nemi hala düşük, ekim ertelenmeli.")
+        BİTİR
+
+EĞER toprak_yapisi uygun değilse
+    yazdır("Toprak yapısı fidan için uygun değil.")
+    BİTİR
+
+EĞER fidan_sagligi uygun değilse
+    yazdır("Fidan sağlığı uygun değil.")
+    BİTİR
+
+kazma_derinligi = fidan_tipi_ozelligine_gore_belirle()
+kazma_genisligi = fidan_tipi_ozelligine_gore_belirle()
+
+kaz_kaz(kazma_derinligi, kazma_genisligi)
+
+fidanı_dik(fidan_tipi)
+
+toprağı_bastır()
+
+sulama_miktari = fidan_tipi_ozelligine_gore_sulama_miktari()
+toprağı_sula(sulama_miktari)
+
+EĞER gübre_gerekli ise
+    gübre_uygula()
+
+EĞER koruma_gerekli ise
+    koruma_uygula()
+
+tekrar_et = true
+TEKRAR_ETEKI
+    toprak_nemi = ölç_toprak_nemi()
+    EĞER toprak_nemi < optimum_nem_seviyesi ise
+        toprağı_sula()
+    değilse
+        tekrar_et = false
+TEKRAR_ETEKI_BİTİR
+
+yazdır("Fidan başarıyla dikildi ve bakım başladı.")
+
+BİTİR
+
