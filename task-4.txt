@@ -1,4 +1,44 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541069
+AD-SOYAD:Mehmet Ali KIRAÇÇAKALI
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+
+Başla
+
+    Girdi olarak al: 
+        P (toplam pasta miktarı)
+        N (kişi sayısı)
+        küçük_birim (pasta diliminin bölünebildiği en küçük birim)
+
+    Eğer N <= 0 ise
+        Yazdır "Geçerli kişi sayısı giriniz."
+        Bitir
+
+    paylar adlı N elemanlı listeyi oluştur, tüm elemanları 0 yap
+
+    esittutar = P / N
+
+    Her i = 1’den N’ye kadar için
+        paylar[i] = esittutar
+
+    toplam_alinan = 0
+    Her i = 1’den N’ye kadar için
+        toplam_alinan = toplam_alinan + paylar[i]
+
+    kalan = P - toplam_alinan
+
+    i = 1
+    iken kalan > 0 tekrarla
+        payver = min(kalan, küçük_birim)
+        paylar[i] = paylar[i] + payver
+        kalan = kalan - payver
+
+        i = i + 1
+        Eğer i > N ise
+            i = 1
+
+    Yazdır "Her kişinin aldığı pasta miktarı:"
+    Her i = 1’den N’ye kadar için
+        Yazdır "Kişi", i, ":", paylar[i]
+
+Bitir
